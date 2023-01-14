@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+	Welcome to Flask Task
+</title> 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+	
+	<div class="page">
+		{%for message in get_flashed_messages()%}
+		<div class="flash">{{message}}</div>
+		{%endfor%}
+
+
+		{%if error%}
+		<div class="error"><strong>Error:</strong>{{error}}</div>
+		{%endif%}
+	</div>
+
+	<br>
+
+	{% block content %}
+
+
+	{% endblock %}
+
+
+</body>
+
+
+</html>
