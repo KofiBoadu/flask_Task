@@ -5,18 +5,18 @@
 <h1> Welcome To Flask Task </h1>
 <h3>Please login to access your task List </h3>
   <form action="/" method="post">
-    <div class="input-group">
+    <div class="login-input-group">
     <label for="name">Username:</label>
     <input type="text" id="username" name="username" value="{{request.form.username}}"><br>
     </div>
 
-    <div class="input-group">
+    <div class="login-input-group">
     <label for="mail">Password:</label>
     <input type="password" id="password" name="password" value="{{request.form.password}}"><br>
     </div>
 
 
-    <div>
+    <div class="login-input-group">
       <button type="submit">Login</button>
     </div>
     
